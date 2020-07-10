@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Data/Forex</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="forex.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><b>Data</b></a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item" style="margin-left: 50px;">
+            <a class="nav-link" href="index.html">Stock Time Series</a>
+          </li>
+          <li class="nav-item active" style="margin-left: 50px;">
+            <a class="nav-link" href="#">Forex(FX)</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="loading_container">
+      <h6 style="margin-left: 11%;">Loading data.....</h6>
+      <progress></progress>
+    </div>
+    <div id="currency_container">
+      <label>From</label>
+      <select id="from_currency" class="btn btn-light" name="from_currency" style="margin-left: 2%;">
+        <option value="AED">United Arab Emirates Dirham</option>
+        <option value="USD">US Dollar</option>
+        <option value="EUR">Euro</option>
+      </select>
+      <label style="margin-left: 5%;">To</label>
+      <select id="to_currency" class="btn btn-light" name="to_currency" style="margin-left: 2%;">
+        <option value="AED">United Arab Emirates Dirham</option>
+        <option value="USD">US Dollar</option>
+        <option value="EUR">Euro</option>
+      </select>
+      <button id="get_data" onclick="getData()" class="btn btn-primary" style="margin-left: 5%;">Get Data</button>
+    </div>
+    <button id="download_data" onclick="forex_download()" class="btn btn-success">Download Data(CSV)</button>
+    <div id="exchange_chart">
+      <div id="exchange"></div>
+      <div id="chartContainer"></div>
+    </div>
+    <div id="table_container"></div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="forex.js"></script>
+
+</html>

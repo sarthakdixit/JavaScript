@@ -1,0 +1,49 @@
+#loading_container{
+  display: none; 
+  width: 200px;
+  margin-top: 1%;
+  margin-left: 45%;
+  margin-right: auto;
+}
+
+#currency_container{
+  margin-top: 5%;
+  margin-left: 18%;
+  margin-right: auto;
+}
+
+#exchange_chart{
+  display: flex;
+  margin-top: 5%;
+}
+
+#exchange{
+  margin-left: 20px;
+  width: 40%;
+}
+
+#chartContainer{
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#para{
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+#table_container{
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#download_data{
+  display: none;
+  margin-top: 20px;
+  margin-left: 42%;
+  margin-right: auto;
+}

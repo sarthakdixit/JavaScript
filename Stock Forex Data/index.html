@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Data/Stock</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><b>Data</b></a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active" style="margin-left: 50px;">
+            <a class="nav-link" href="#">Stock Time Series</a>
+          </li>
+          <li class="nav-item" style="margin-left: 50px;">
+            <a class="nav-link" href="forex.html">Forex(FX)</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="loading_container">
+      <h6 style="margin-left: 11%;">Loading data.....</h6>
+      <progress></progress>
+    </div>
+    <div id="company_container">
+      <select id="companies" class="btn btn-light" name="companies">
+        <option value="Apple Inc(AAPL)">Apple Inc(AAPL)</option>
+        <option value="Microsoft Corp(MSFT)">Microsoft Corp(MSFT)</option>
+        <option value="International Business Machine(IBM)">International Business Machine(IBM)</option>
+      </select>
+      <button id="get_data" onclick="getData()" class="btn btn-primary" style="margin-left: 5%;">Get Data</button>
+    </div>
+    <button id="download_data" onclick="download()" class="btn btn-success">Download Data(CSV)</button>
+    <div id="chartContainer"></div>
+    <div id="table_container"></div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="index.js"></script>
+
+</html>
